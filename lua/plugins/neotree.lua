@@ -13,8 +13,10 @@ return {
             close_if_last_window = true,
             filesystem = {
                 follow_current_file = { enabled = true },
-                hide_dotfiles = false,
-                hide_gitignore = false
+                filtered_items = {
+                    hide_dotfiles = false,
+                    hide_gitignored = false
+                }
             }
         })
     end
