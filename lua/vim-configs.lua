@@ -8,4 +8,3 @@ vim.wo.number = true
 vim.g.mapleader = " "
 
 vim.keymap.set('n', '<leader>w', '<C-w>', {})
-
