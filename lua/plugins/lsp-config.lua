@@ -7,9 +7,20 @@ return {
     },
     {
         "williamboman/mason-lspconfig.nvim",
+        dependancies = {
+            "williamboman/mason.nvim",
+        },
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "clangd" }
+                ensure_installed = {
+                    -- LUA
+                    "lua_ls",
+                    -- Python
+                    "pyright",
+                    "ruff",
+                    -- C / C++
+                    "clangd",
+                }
             })
         end
     },
@@ -33,5 +44,5 @@ return {
             vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
             vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
         end
-    }
+    },
 }
